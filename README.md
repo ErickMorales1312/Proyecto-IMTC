@@ -15,15 +15,12 @@
 1. **Get the Repository Link**
    - Go to Proyecto-IMTC GitHub Repository.
    - Click on the green "Code" button and copy the HTTP link.
-   !Clone Repository
 
 2. **Clone the Repository**
    - Open File Explorer and navigate to the folder where you want to save the repository.
    - Open Git Bash in the selected directory and run the following command:
      ```bash
      git clone <HTTP_LINK>
-     ```
-   !Git Clone
 
 ### Using Command Prompt 
 You can use git -h to see more details about each Git instruction. 

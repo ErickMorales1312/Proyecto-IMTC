@@ -64,7 +64,7 @@
       39,
       40
     ],
-    "visible_layers": "fffffff_80000001",
+    "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "git": {
@@ -74,7 +74,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Robot_Electronic_Design.kicad_prl",
+    "filename": "Fire_Detection_System.kicad_prl",
     "version": 3
   },
   "project": {

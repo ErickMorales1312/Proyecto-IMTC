@@ -873,367 +873,10 @@
 				)
 			)
 		)
-		(symbol "Driver_Motor:L298N"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 16.51 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Value" "L298N"
-				(at 12.7 16.51 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical"
-				(at 1.27 -16.51 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf"
-				(at 3.81 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Dual full bridge motor driver, up to 46V, 4A, Multiwatt15-V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "H-bridge motor driver"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO?220*StaggerOdd*Vertical*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "L298N_0_1"
-				(rectangle
-					(start -12.7 15.24)
-					(end 12.7 -15.24)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "L298N_1_1"
-				(pin power_in line
-					(at -7.62 -17.78 90)
-					(length 2.54)
-					(name "SENSE_A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 2.54 0)
-					(length 2.54)
-					(name "IN3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 -2.54 0)
-					(length 2.54)
-					(name "EnB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 0 0)
-					(length 2.54)
-					(name "IN4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -2.54 180)
-					(length 2.54)
-					(name "OUT3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -5.08 180)
-					(length 2.54)
-					(name "OUT4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -17.78 90)
-					(length 2.54)
-					(name "SENSE_B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 5.08 180)
-					(length 2.54)
-					(name "OUT1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 2.54 180)
-					(length 2.54)
-					(name "OUT2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 17.78 270)
-					(length 2.54)
-					(name "Vs"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 12.7 0)
-					(length 2.54)
-					(name "IN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 7.62 0)
-					(length 2.54)
-					(name "EnA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 10.16 0)
-					(length 2.54)
-					(name "IN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 17.78 270)
-					(length 2.54)
-					(name "Vss"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 	)
 	(wire
 		(pts
-			(xy 67.31 48.26) (xy 69.85 48.26)
+			(xy 68.58 50.8) (xy 71.12 50.8)
 		)
 		(stroke
 			(width 0)
@@ -1243,7 +886,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 60.96) (xy 38.1 60.96)
+			(xy 36.83 63.5) (xy 39.37 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1253,7 +896,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 48.26) (xy 38.1 48.26)
+			(xy 36.83 50.8) (xy 39.37 50.8)
 		)
 		(stroke
 			(width 0)
@@ -1263,7 +906,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 27.94) (xy 38.1 27.94)
+			(xy 36.83 30.48) (xy 39.37 30.48)
 		)
 		(stroke
 			(width 0)
@@ -1273,7 +916,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 50.8) (xy 38.1 50.8)
+			(xy 36.83 53.34) (xy 39.37 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1283,7 +926,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 27.94) (xy 69.85 27.94)
+			(xy 68.58 30.48) (xy 71.12 30.48)
 		)
 		(stroke
 			(width 0)
@@ -1293,7 +936,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 45.72) (xy 69.85 45.72)
+			(xy 68.58 48.26) (xy 71.12 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1303,7 +946,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 73.66) (xy 38.1 73.66)
+			(xy 36.83 76.2) (xy 39.37 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1313,7 +956,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 43.18) (xy 69.85 43.18)
+			(xy 68.58 45.72) (xy 71.12 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1321,9 +964,21 @@
 		)
 		(uuid "d92e4f8d-679d-49cd-b8a4-c718932fc9a3")
 	)
+	(rectangle
+		(start 21.844 23.114)
+		(end 86.868 79.756)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 330c634c-60f2-4c23-b307-3f7ab427b58f)
+	)
 	(text "esp32"
 		(exclude_from_sim no)
-		(at 49.53 50.8 0)
+		(at 50.8 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1334,7 +989,7 @@
 	)
 	(global_label "ESP_GND"
 		(shape input)
-		(at 69.85 27.94 0)
+		(at 71.12 30.48 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1344,7 +999,7 @@
 		)
 		(uuid "00ee8242-9d48-4b57-86ee-eb8b56efbbba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80.7298 28.0194 0)
+			(at 81.9998 30.5594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1356,7 +1011,7 @@
 	)
 	(global_label "M21"
 		(shape input)
-		(at 69.85 45.72 0)
+		(at 71.12 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1366,7 +1021,7 @@
 		)
 		(uuid "10c8b1a1-6fcc-4516-933e-0dc068f58b9d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.1336 45.7994 0)
+			(at 77.4036 48.3394 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1378,7 +1033,7 @@
 	)
 	(global_label "ESP_GND"
 		(shape input)
-		(at 69.85 43.18 0)
+		(at 71.12 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1388,7 +1043,7 @@
 		)
 		(uuid "365a624d-aed5-4ccd-86ac-29f042f96fec")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 80.7298 43.2594 0)
+			(at 81.9998 45.7994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1400,7 +1055,7 @@
 	)
 	(global_label "M11"
 		(shape input)
-		(at 35.56 48.26 180)
+		(at 36.83 50.8 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1410,7 +1065,7 @@
 		)
 		(uuid "673e7e4f-79f8-4317-9a0b-a3a1cdeb44fb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 29.2764 48.1806 0)
+			(at 30.5464 50.7206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1422,7 +1077,7 @@
 	)
 	(global_label "M12"
 		(shape input)
-		(at 35.56 50.8 180)
+		(at 36.83 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1432,7 +1087,7 @@
 		)
 		(uuid "a475aa60-c351-48bf-abd1-81b637bbfb07")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 29.2764 50.8794 0)
+			(at 30.5464 53.4194 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1444,7 +1099,7 @@
 	)
 	(global_label "ESP_GND"
 		(shape input)
-		(at 35.56 60.96 180)
+		(at 36.83 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1454,7 +1109,7 @@
 		)
 		(uuid "bdd5b55d-3f46-40ad-a27d-b15e6562c977")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 24.6802 60.8806 0)
+			(at 25.9502 63.4206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1466,7 +1121,7 @@
 	)
 	(global_label "M22"
 		(shape input)
-		(at 69.85 48.26 0)
+		(at 71.12 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1476,7 +1131,7 @@
 		)
 		(uuid "f359b111-c52a-4c22-800c-6af8452ed4d5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.1336 48.1806 0)
+			(at 77.4036 50.7206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1488,7 +1143,7 @@
 	)
 	(hierarchical_label "3.3V"
 		(shape bidirectional)
-		(at 35.56 27.94 180)
+		(at 36.83 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1500,7 +1155,7 @@
 	)
 	(hierarchical_label "Vcc"
 		(shape bidirectional)
-		(at 35.56 73.66 180)
+		(at 36.83 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1511,118 +1166,8 @@
 		(uuid "fc39ac41-9d1c-4dbb-89a6-ed7663c8a29e")
 	)
 	(symbol
-		(lib_id "Driver_Motor:L298N")
-		(at 123.19 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "417e19b8-57a0-4209-a440-49733938659b")
-		(property "Reference" "U1"
-			(at 127.9241 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "L298N"
-			(at 127.9241 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical"
-			(at 124.46 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf"
-			(at 127 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual full bridge motor driver, up to 46V, 4A, Multiwatt15-V"
-			(at 123.19 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b0faedd5-50de-4cd7-a0bc-5e50912aa91d")
-		)
-		(pin "10"
-			(uuid "678ad332-ecba-4f75-b283-99b941795826")
-		)
-		(pin "12"
-			(uuid "2f56ed85-a652-44ac-92b2-23f7d7dce978")
-		)
-		(pin "11"
-			(uuid "e42e606f-1664-40ba-bf64-1ae9d8ec9868")
-		)
-		(pin "3"
-			(uuid "6593fda1-20ad-4721-b410-1c37d98f4605")
-		)
-		(pin "4"
-			(uuid "03436368-0597-415f-9fe4-fdc75d07aad8")
-		)
-		(pin "5"
-			(uuid "b6271212-58ea-4f3e-ac68-f3c7e302af59")
-		)
-		(pin "8"
-			(uuid "59802316-fa44-48eb-8199-0e083d5b5fba")
-		)
-		(pin "13"
-			(uuid "c9ea7209-2041-4e99-bb2c-bb1dbea24b62")
-		)
-		(pin "9"
-			(uuid "bf148ddd-3f36-438a-b297-348a1b7db45b")
-		)
-		(pin "1"
-			(uuid "57c8f52d-2fbb-4378-8793-d3ab05d5beb1")
-		)
-		(pin "15"
-			(uuid "7d33b32d-aee6-4cbb-9382-0307f3110b7c")
-		)
-		(pin "6"
-			(uuid "bbd1988f-acc7-407e-9665-5583beaa947a")
-		)
-		(pin "7"
-			(uuid "e6c7750e-ccd4-445a-9b18-ec5c8f728e66")
-		)
-		(pin "14"
-			(uuid "125b85b0-fe45-4392-8969-dae641875187")
-		)
-		(instances
-			(project ""
-				(path "/67a23c6f-cb01-457f-a901-c3be1e74a6f5"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Conn_01x19_Female")
-		(at 62.23 50.8 0)
+		(at 63.5 53.34 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1631,7 +1176,7 @@
 		(dnp no)
 		(uuid "c3f8fd26-fba3-4ac3-a64d-2438be50791c")
 		(property "Reference" "J2"
-			(at 63.5 24.13 0)
+			(at 64.77 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1639,7 +1184,7 @@
 			)
 		)
 		(property "Value" "Conn_01x19_Female"
-			(at 62.865 25.4 0)
+			(at 64.135 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1648,7 +1193,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical"
-			(at 62.23 50.8 0)
+			(at 63.5 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1657,7 +1202,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 62.23 50.8 0)
+			(at 63.5 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1666,7 +1211,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 62.23 50.8 0)
+			(at 63.5 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1742,7 +1287,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x19_Female")
-		(at 43.18 50.8 0)
+		(at 44.45 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1750,7 +1295,7 @@
 		(dnp no)
 		(uuid "f2290cfb-8b0c-471e-8512-ce01550495ee")
 		(property "Reference" "J1"
-			(at 38.1 24.13 0)
+			(at 39.37 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1759,7 +1304,7 @@
 			)
 		)
 		(property "Value" "Conn_01x19_Female"
-			(at 31.75 25.4 0)
+			(at 33.02 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1769,7 +1314,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical"
-			(at 43.18 50.8 0)
+			(at 44.45 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1778,7 +1323,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 43.18 50.8 0)
+			(at 44.45 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1787,7 +1332,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 43.18 50.8 0)
+			(at 44.45 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -873,33 +873,43 @@
 				)
 			)
 		)
-		(symbol "Driver_Motor:L298N"
+		(symbol "Transistor_IGBT:IRG4PF50W"
 			(pin_names
-				(offset 1.016)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 16.51 0)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify left)
 				)
 			)
-			(property "Value" "L298N"
-				(at 12.7 16.51 0)
+			(property "Value" "IRG4PF50W"
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical"
-				(at 1.27 -16.51 0)
+			(property "Footprint" "Package_TO_SOT_THT:TO-247-3_Vertical"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irg4pf50w.pdf"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -908,16 +918,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf"
-				(at 3.81 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Dual full bridge motor driver, up to 46V, 4A, Multiwatt15-V"
+			(property "Description" "28A, 900V, N-Channel IGBT"
 				(at 0 0 0)
 				(effects
 					(font
@@ -926,7 +927,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "H-bridge motor driver"
+			(property "ki_keywords" "N-Channel IGBT Power Transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -935,7 +936,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?220*StaggerOdd*Vertical*"
+			(property "ki_fp_filters" "TO?247*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -944,24 +945,144 @@
 					(hide yes)
 				)
 			)
-			(symbol "L298N_0_1"
-				(rectangle
-					(start -12.7 15.24)
-					(end 12.7 -15.24)
+			(symbol "IRG4PF50W_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.254 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy 0.762 -2.032)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.032) (xy 0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.413) (xy 0.762 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -0.889) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.413) (xy 0.762 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.397 -2.159) (xy 1.651 -1.651) (xy 2.54 -2.413) (xy 1.397 -2.159)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.159 1.905) (xy 1.905 2.413) (xy 1.016 1.651) (xy 2.159 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
-			(symbol "L298N_1_1"
-				(pin power_in line
-					(at -7.62 -17.78 90)
-					(length 2.54)
-					(name "SENSE_A"
+			(symbol "IRG4PF50W_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -976,118 +1097,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -15.24 2.54 0)
+				(pin passive line
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "IN3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 -2.54 0)
-					(length 2.54)
-					(name "EnB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 0 0)
-					(length 2.54)
-					(name "IN4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -2.54 180)
-					(length 2.54)
-					(name "OUT3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -5.08 180)
-					(length 2.54)
-					(name "OUT4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -17.78 90)
-					(length 2.54)
-					(name "SENSE_B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 5.08 180)
-					(length 2.54)
-					(name "OUT1"
+					(name "C"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1102,10 +1115,10 @@
 						)
 					)
 				)
-				(pin output line
-					(at 15.24 2.54 180)
+				(pin passive line
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "OUT2"
+					(name "E"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1120,116 +1133,30 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 2.54 17.78 270)
-					(length 2.54)
-					(name "Vs"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 12.7 0)
-					(length 2.54)
-					(name "IN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 7.62 0)
-					(length 2.54)
-					(name "EnA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 10.16 0)
-					(length 2.54)
-					(name "IN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 17.78 270)
-					(length 2.54)
-					(name "Vss"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 		)
+	)
+	(junction
+		(at 67.31 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "09b8af24-4a7c-4328-81f3-9effa25e8604")
+	)
+	(junction
+		(at 67.31 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49aab7a4-4b1c-48ec-a505-9c8a24e60fa1")
+	)
+	(wire
+		(pts
+			(xy 80.01 58.42) (xy 67.31 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0af1419d-5c81-48e2-919b-b6cb4c9b5d34")
 	)
 	(wire
 		(pts
@@ -1253,6 +1180,26 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 53.34) (xy 80.01 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "466a7657-234b-45a6-b5da-ed39f519b4f8")
+	)
+	(wire
+		(pts
+			(xy 67.31 33.02) (xy 67.31 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "504a2646-0a55-4fd7-b558-7c4468d6975e")
+	)
+	(wire
+		(pts
 			(xy 35.56 48.26) (xy 38.1 48.26)
 		)
 		(stroke
@@ -1260,6 +1207,26 @@
 			(type default)
 		)
 		(uuid "50bef237-b2e4-4962-8699-6050b6b3501a")
+	)
+	(wire
+		(pts
+			(xy 114.3 48.26) (xy 114.3 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b2f39c7-0d09-4f5a-9ee5-153880ce2cf1")
+	)
+	(wire
+		(pts
+			(xy 80.01 53.34) (xy 80.01 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b9e3d60-3b44-4b98-8cb0-bee4206e5f72")
 	)
 	(wire
 		(pts
@@ -1273,6 +1240,26 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 40.64) (xy 67.31 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd93084-5373-48f8-ac4e-e7f2fab5ead5")
+	)
+	(wire
+		(pts
+			(xy 121.92 43.18) (xy 121.92 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fca00fe-63a3-498e-9341-189e3ae72773")
+	)
+	(wire
+		(pts
 			(xy 35.56 50.8) (xy 38.1 50.8)
 		)
 		(stroke
@@ -1280,6 +1267,16 @@
 			(type default)
 		)
 		(uuid "91264f33-62bd-438d-924a-68cb1df3f5e6")
+	)
+	(wire
+		(pts
+			(xy 121.92 33.02) (xy 67.31 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "955a76c6-8cfb-40c6-84a1-53ad2d50bed4")
 	)
 	(wire
 		(pts
@@ -1320,6 +1317,16 @@
 			(type default)
 		)
 		(uuid "d92e4f8d-679d-49cd-b8a4-c718932fc9a3")
+	)
+	(wire
+		(pts
+			(xy 67.31 35.56) (xy 67.31 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f79d78af-4a29-4f18-bc01-80e0f1c7a766")
 	)
 	(text "esp32"
 		(exclude_from_sim no)
@@ -1511,17 +1518,17 @@
 		(uuid "fc39ac41-9d1c-4dbb-89a6-ed7663c8a29e")
 	)
 	(symbol
-		(lib_id "Driver_Motor:L298N")
-		(at 123.19 46.99 0)
+		(lib_id "Transistor_IGBT:IRG4PF50W")
+		(at 119.38 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "417e19b8-57a0-4209-a440-49733938659b")
-		(property "Reference" "U1"
-			(at 127.9241 26.67 0)
+		(uuid "249c3a87-5045-4464-91c7-a4a080dbf956")
+		(property "Reference" "Q1"
+			(at 124.46 46.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1529,8 +1536,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "L298N"
-			(at 127.9241 29.21 0)
+		(property "Value" "IRG4PF50W"
+			(at 124.46 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1538,8 +1545,19 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical"
-			(at 124.46 63.5 0)
+		(property "Footprint" "Package_TO_SOT_THT:TO-247-3_Vertical"
+			(at 124.46 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irg4pf50w.pdf"
+			(at 119.38 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1548,17 +1566,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf"
-			(at 127 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual full bridge motor driver, up to 46V, 4A, Multiwatt15-V"
-			(at 123.19 46.99 0)
+		(property "Description" "28A, 900V, N-Channel IGBT"
+			(at 119.38 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1567,54 +1576,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "b0faedd5-50de-4cd7-a0bc-5e50912aa91d")
-		)
-		(pin "10"
-			(uuid "678ad332-ecba-4f75-b283-99b941795826")
-		)
-		(pin "12"
-			(uuid "2f56ed85-a652-44ac-92b2-23f7d7dce978")
-		)
-		(pin "11"
-			(uuid "e42e606f-1664-40ba-bf64-1ae9d8ec9868")
-		)
-		(pin "3"
-			(uuid "6593fda1-20ad-4721-b410-1c37d98f4605")
-		)
-		(pin "4"
-			(uuid "03436368-0597-415f-9fe4-fdc75d07aad8")
-		)
-		(pin "5"
-			(uuid "b6271212-58ea-4f3e-ac68-f3c7e302af59")
-		)
-		(pin "8"
-			(uuid "59802316-fa44-48eb-8199-0e083d5b5fba")
-		)
-		(pin "13"
-			(uuid "c9ea7209-2041-4e99-bb2c-bb1dbea24b62")
-		)
-		(pin "9"
-			(uuid "bf148ddd-3f36-438a-b297-348a1b7db45b")
+			(uuid "1b3a5223-fc60-40e9-8504-5123bab15949")
 		)
 		(pin "1"
-			(uuid "57c8f52d-2fbb-4378-8793-d3ab05d5beb1")
+			(uuid "66d9f176-a7f9-4d2b-b239-8cd4d9916268")
 		)
-		(pin "15"
-			(uuid "7d33b32d-aee6-4cbb-9382-0307f3110b7c")
-		)
-		(pin "6"
-			(uuid "bbd1988f-acc7-407e-9665-5583beaa947a")
-		)
-		(pin "7"
-			(uuid "e6c7750e-ccd4-445a-9b18-ec5c8f728e66")
-		)
-		(pin "14"
-			(uuid "125b85b0-fe45-4392-8969-dae641875187")
+		(pin "3"
+			(uuid "c44e07ee-c8cb-434d-9950-bdd3d53d36ad")
 		)
 		(instances
 			(project ""
 				(path "/67a23c6f-cb01-457f-a901-c3be1e74a6f5"
-					(reference "U1")
+					(reference "Q1")
 					(unit 1)
 				)
 			)

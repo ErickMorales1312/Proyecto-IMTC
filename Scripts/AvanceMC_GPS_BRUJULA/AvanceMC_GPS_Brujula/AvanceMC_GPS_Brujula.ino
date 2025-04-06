@@ -5,9 +5,10 @@
 #include "HTML.h"
 
 // Variables
-float distance = 0; 
+QMC5883LCompass compass;
 float heading = 0;
 float bearing = 0;
+float distance = 0; 
 long duration;
 bool State2 = LOW;
 bool State1 = LOW;
@@ -32,8 +33,13 @@ bool State0 = LOW;
 #define declinacion 4.44 // Local declination in degrees
 
 // Web server
-const char* ssid = "IZZI-77B8";
-const char* password = "E3ZI7TLRY8FM";
+const char* ssid = "X";
+const char* password = "X";
+
+IPAddress ip(192,168,238,215); 
+IPAddress gateway(192,168,238,1); 
+IPAddress subnet(255,255,255,0);
+
 WebServer server(80);
 
 // Declaración de funciones

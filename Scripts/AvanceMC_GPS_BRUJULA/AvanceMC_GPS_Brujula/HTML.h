@@ -11,7 +11,6 @@ extern bool State0;
 extern float heading;
 extern float bearing;
 
-
 String SendHTML(uint8_t Status2, uint8_t Status1, uint8_t Status0);
 String generateButtonHTML(uint8_t Status2, uint8_t Status1, uint8_t Status0);
 

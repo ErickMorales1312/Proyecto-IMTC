@@ -10,6 +10,8 @@ float heading = 0;
 float bearing = 0;
 float distance = 0; 
 long duration;
+unsigned long lastDebounceTime = 0;
+unsigned long debounceDelay = 50;
 bool State2 = LOW;
 bool State1 = LOW;
 bool State0 = LOW;
@@ -91,6 +93,8 @@ void setup() {
   // Configuración de WiFi
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
+  WiFi.config(ip, gateway, subnet);
+
   Serial.println("");
 
   while (WiFi.status() != WL_CONNECTED) { delay(500); Serial.print("."); }
@@ -126,8 +130,6 @@ void loop() {
   Serial.print("Heading: ");
   Serial.print(heading);
   Serial.println("°");
-
-  delay(500);
 
   // Lectura del sensor ultrasonico
   distance = checkdistance();
@@ -225,10 +227,23 @@ void sendResponse(bool state2, bool state1, bool state0) {
   server.send(200, "text/html", SendHTML(State2, State1, State0));
 }
 
-void handle_OnConnect() { sendResponse(LOW, LOW, LOW); }
-void handle_stop() { sendResponse(LOW, LOW, LOW); }
-void handle_adelante() { sendResponse(LOW, LOW, HIGH); }
-void handle_atras() { sendResponse(LOW, HIGH, LOW); }
-void handle_izquierda() { sendResponse(LOW, HIGH, HIGH); }
-void handle_derecha() { sendResponse(HIGH, LOW, LOW); }
-void handle_NotFound() { server.send(404, "text/plain", "La pagina no existe"); }
+void handle_adelante() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, LOW, HIGH); lastDebounceTime = millis(); } }
+void handle_atras() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, HIGH, LOW); lastDebounceTime = millis(); } }
+void handle_izquierda() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, HIGH, HIGH); lastDebounceTime = millis(); } }
+void handle_derecha() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(HIGH, LOW, LOW); lastDebounceTime = millis(); } }
+
+}
+
+void handle_izquierda() {
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    sendResponse(LOW, HIGH, HIGH);
+    lastDebounceTime = millis();
+  }
+}
+
+void handle_derecha() {
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    sendResponse(HIGH, LOW, LOW);
+    lastDebounceTime = millis();
+  }
+}

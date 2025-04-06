@@ -16,12 +16,12 @@ bool State0 = LOW;
 // Definición de pines
 #define USTrigPin 33
 #define USEchoPin 32
-#define EN1Pin 16
-#define EN2Pin 18
-#define IN1Pin 4
-#define IN2Pin 2
-#define IN3Pin 5
-#define IN4Pin 17
+#define EN1Pin 5
+#define EN2Pin 15
+#define IN1Pin 17
+#define IN2Pin 16
+#define IN3Pin 4
+#define IN4Pin 2
 
 // Constantes
 #define latVehiculo 25.697400

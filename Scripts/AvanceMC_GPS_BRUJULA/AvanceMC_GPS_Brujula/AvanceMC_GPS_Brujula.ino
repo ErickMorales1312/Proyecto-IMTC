@@ -35,11 +35,11 @@ bool State0 = LOW;
 #define declinacion 4.44 // Local declination in degrees
 
 // Web server
-const char* ssid = "X";
-const char* password = "X";
+const char* ssid = "IZZI-77B8";
+const char* password = "E3ZI7TLRY8FM";
 
-IPAddress ip(192,168,238,215); 
-IPAddress gateway(192,168,238,1); 
+IPAddress ip(192,168,0,27); 
+IPAddress gateway(192,168,0,1); 
 IPAddress subnet(255,255,255,0);
 
 WebServer server(80);
@@ -141,19 +141,19 @@ void loop() {
     MotorStop(2);
   }
   if (!State2 && !State1 && State0) { // FORWARD
-    controlMotor(1, true, 100);
-    controlMotor(2, true, 100);
+    controlMotor(1, true, 170);
+    controlMotor(2, true, 170);
   }
   if (!State2 && State1 && !State0) { // BACKWARD
-    controlMotor(1, false, 100);
-    controlMotor(2, false, 100);
+    controlMotor(1, false, 170);
+    controlMotor(2, false, 170);
   }
   if (!State2 && State1 && State0) { // LEFT
     MotorStop(1);
-    controlMotor(2, true, 100);
+    controlMotor(2, true, 170);
   }
   if (State2 && !State1 && !State0) { // RIGHT
-    controlMotor(1, true, 100);
+    controlMotor(1, true, 170);
     MotorStop(2);
   }
 }
@@ -227,23 +227,10 @@ void sendResponse(bool state2, bool state1, bool state0) {
   server.send(200, "text/html", SendHTML(State2, State1, State0));
 }
 
+void handle_OnConnect() {sendResponse(LOW, LOW, LOW);}
+void handle_stop() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, LOW, LOW); lastDebounceTime = millis(); } }
 void handle_adelante() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, LOW, HIGH); lastDebounceTime = millis(); } }
 void handle_atras() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, HIGH, LOW); lastDebounceTime = millis(); } }
 void handle_izquierda() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(LOW, HIGH, HIGH); lastDebounceTime = millis(); } }
 void handle_derecha() { if ((millis() - lastDebounceTime) > debounceDelay) { sendResponse(HIGH, LOW, LOW); lastDebounceTime = millis(); } }
-
-}
-
-void handle_izquierda() {
-  if ((millis() - lastDebounceTime) > debounceDelay) {
-    sendResponse(LOW, HIGH, HIGH);
-    lastDebounceTime = millis();
-  }
-}
-
-void handle_derecha() {
-  if ((millis() - lastDebounceTime) > debounceDelay) {
-    sendResponse(HIGH, LOW, LOW);
-    lastDebounceTime = millis();
-  }
-}
+void handle_NotFound() {server.send(404, "text/plain", "Page Not Found");}

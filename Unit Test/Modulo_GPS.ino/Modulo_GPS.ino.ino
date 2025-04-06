@@ -2,8 +2,8 @@
 #include <SoftwareSerial.h>
 
 // Configuración de los pines para el módulo GPS
-const int RXPin = 4; // Pin de recepción (RX) del GPS
-const int TXPin = 3; // Pin de transmisión (TX) del GPS
+const int RXPin = 16; // Pin de recepción (RX) del GPS
+const int TXPin = 17; // Pin de transmisión (TX) del GPS
 const uint32_t GPSBaud = 9600; // Velocidad en baudios del GPS
 
 // Instancia de TinyGPS++

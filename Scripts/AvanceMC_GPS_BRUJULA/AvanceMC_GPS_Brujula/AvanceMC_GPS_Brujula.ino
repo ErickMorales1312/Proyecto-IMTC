@@ -2,10 +2,14 @@
 #include <WebServer.h>
 #include <Wire.h>
 #include <QMC5883LCompass.h>
+#include <TinyGPS++.h>
+#include <SoftwareSerial.h>
 #include "HTML.h"
 
 // Variables
+TinyGPSPlus gps;
 QMC5883LCompass compass;
+SoftwareSerial ss(RXPin, TXPin);
 float heading = 0;
 float bearing = 0;
 float distance = 0; 
@@ -25,6 +29,8 @@ bool State0 = LOW;
 #define IN2Pin 16
 #define IN3Pin 4
 #define IN4Pin 2
+const int RXPin = 4; // Pin de recepción (RX) del GPS
+const int TXPin = 3; // Pin de transmisión (TX) del GPS
 
 // Constantes
 #define latVehiculo 25.697400
@@ -35,11 +41,11 @@ bool State0 = LOW;
 #define declinacion 4.44 // Local declination in degrees
 
 // Web server
-const char* ssid = "IZZI-77B8";
-const char* password = "E3ZI7TLRY8FM";
+const char* ssid = "OswaldoSanchez";
+const char* password = "ESP32FIME";
 
-IPAddress ip(192,168,0,27); 
-IPAddress gateway(192,168,0,1); 
+IPAddress ip(192,168,251,100); 
+IPAddress gateway(192,168,251,1); 
 IPAddress subnet(255,255,255,0);
 
 WebServer server(80);
@@ -81,6 +87,10 @@ void setup() {
   pinMode(IN3Pin, OUTPUT);
   pinMode(IN4Pin, OUTPUT);
 
+  //Configuración del GPS
+  ss.begin(GPSBaud);
+  Serial.println("GPS Inicializado");
+
   // Configuración de la brújula
   Wire.begin();
   compass.init();
@@ -116,6 +126,16 @@ void setup() {
 }
 
 void loop() {
+   // Leer datos del GPS
+  while (ss.available() > 0) { gps.encode(ss.read());}
+  // Si se ha recibido una nueva posición
+  if (gps.location.isUpdated()) {
+    Serial.print("Latitud: ");
+    Serial.println(gps.location.lat(), 6); // Imprimir latitud con 6 decimales
+    Serial.print("Longitud: ");
+    Serial.println(gps.location.lng(), 6); // Imprimir longitud con 6 decimales
+  }
+
   // Lectura de la brújula
   compass.read();
   int x = compass.getX();
@@ -141,19 +161,19 @@ void loop() {
     MotorStop(2);
   }
   if (!State2 && !State1 && State0) { // FORWARD
-    controlMotor(1, true, 170);
-    controlMotor(2, true, 170);
+    controlMotor(1, true, 100);
+    controlMotor(2, true, 100);
   }
   if (!State2 && State1 && !State0) { // BACKWARD
-    controlMotor(1, false, 170);
-    controlMotor(2, false, 170);
+    controlMotor(1, false, 100);
+    controlMotor(2, false, 100);
   }
   if (!State2 && State1 && State0) { // LEFT
     MotorStop(1);
-    controlMotor(2, true, 170);
+    controlMotor(2, true, 100);
   }
   if (State2 && !State1 && !State0) { // RIGHT
-    controlMotor(1, true, 170);
+    controlMotor(1, true, 100);
     MotorStop(2);
   }
 }

@@ -18,11 +18,10 @@ String SendHTML(uint8_t Status2, uint8_t Status1, uint8_t Status0) {
   html += "<body>\n";
   html += "<h1>Carrito</h1>\n";
   html += "<h3>Sensores</h3>\n";
-  html += "<p>Ultrasonic Distance: " + String(distance) + " cm</p>\n";
   html += "<p>Heading: " + String(heading) + "°</p>\n";
   html += "<p>Bearing: " + String(bearing) + "°</p>\n";
-  html += "<p>Latitud: " + String(heading) + "°</p>\n";
-  html += "<p>Longitud: " + String(bearing) + "°</p>\n";
+  html += "<p>Latitud: " + String(latitud) + "°</p>\n";
+  html += "<p>Longitud: " + String(longitud) + "°</p>\n";
   html += "<br><br>\n";
   html += "<h3>Control</h3>\n";
 

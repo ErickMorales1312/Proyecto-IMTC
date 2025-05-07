@@ -1,7 +1,6 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include "HTML.h"
-#include "esp_log.h"
 
 // Variables
 bool State2 = LOW;
@@ -98,12 +97,12 @@ void loop() {
     controlMotor(2, false, 230);
   }
   if (!State2 && State1 && State0) { // LEFT
-    MotorStop(2);
     controlMotor(1, true, 230);
+    controlMotor(2, false, 230);
   }
   if (State2 && !State1 && !State0) { // RIGHT
+    controlMotor(1, false, 230);
     controlMotor(2, true, 230);
-    MotorStop(1);
   }
 }
 

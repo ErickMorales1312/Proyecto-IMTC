@@ -2805,24 +2805,22 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U2"
-				(at 7.62 17.272 0)
+				(at 8.89 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "NEO-6M"
-				(at 4.826 -1.778 0)
+			(property "Value" "NEO-7M"
+				(at 8.89 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "NEO-6M:NEO-6M"
+			(property "Footprint" "NEO-7M:NEO-7M"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2900,7 +2898,7 @@
 					(hide yes)
 				)
 			)
-			(property "MP" "NEO-6M"
+			(property "MP" "NEO-7M"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2942,7 +2940,9 @@
 						(type background)
 					)
 				)
-				(text "NEO-6M"
+			)
+			(symbol "NEO-6M_1_0"
+				(text "NEO-7M"
 					(at 3.302 14.732 0)
 					(effects
 						(font
@@ -2951,8 +2951,6 @@
 						(justify left)
 					)
 				)
-			)
-			(symbol "NEO-6M_1_0"
 				(pin bidirectional line
 					(at 0 10.16 0)
 					(length 2.54)
@@ -4969,7 +4967,7 @@
 		)
 		(uuid "6e9823dd-2e3e-4343-ab98-ca404f6680cf")
 	)
-	(text "GPS Module (NEO-6M)"
+	(text "GPS Module (NEO-7M)"
 		(exclude_from_sim no)
 		(at 34.544 202.438 0)
 		(effects
@@ -8185,7 +8183,7 @@
 				)
 			)
 		)
-		(property "Value" "NEO-6M"
+		(property "Value" "NEO-7M"
 			(at 36.83 210.82 0)
 			(effects
 				(font
@@ -8193,7 +8191,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NEO-6M:NEO-6M"
+		(property "Footprint" "NEO-7M:NEO-7M"
 			(at 45.72 213.36 0)
 			(effects
 				(font
@@ -8271,7 +8269,7 @@
 				(hide yes)
 			)
 		)
-		(property "MP" "NEO-6M"
+		(property "MP" "NEO-7M"
 			(at 45.72 213.36 0)
 			(effects
 				(font

@@ -1,6 +1,7 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include "HTML.h"
+#include "esp_log.h"
 
 // Variables
 bool State2 = LOW;
@@ -18,7 +19,7 @@ const int RXPin = 16; // Pin de recepción (RX) del GPS
 const int TXPin = 17; // Pin de transmisión (TX) del GPS
 
 // Web server
-const char* ssid = "IZZI-5G-77B8";
+const char* ssid = "IZZI-77B8";
 const char* password = "E3ZI7TLRY8FM";
 
 IPAddress ip(192,168,0,100); 
@@ -89,20 +90,20 @@ void loop() {
     MotorStop(2);
   }
   if (!State2 && !State1 && State0) { // FORWARD
-    controlMotor(1, true, 100);
-    controlMotor(2, true, 100);
+    controlMotor(1, true, 230);
+    controlMotor(2, true, 230);
   }
   if (!State2 && State1 && !State0) { // BACKWARD
-    controlMotor(1, false, 100);
-    controlMotor(2, false, 100);
+    controlMotor(1, false, 230);
+    controlMotor(2, false, 230);
   }
   if (!State2 && State1 && State0) { // LEFT
-    MotorStop(1);
-    controlMotor(2, true, 100);
+    MotorStop(2);
+    controlMotor(1, true, 230);
   }
   if (State2 && !State1 && !State0) { // RIGHT
-    controlMotor(1, true, 100);
-    MotorStop(2);
+    controlMotor(2, true, 230);
+    MotorStop(1);
   }
 }
 

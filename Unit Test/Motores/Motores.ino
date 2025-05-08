@@ -98,10 +98,12 @@ void loop() {
   }
   if (!State2 && State1 && State0) { // LEFT
     controlMotor(1, true, 230);
-    controlMotor(2, false, 230);
+    //MotorStop(2);
+    controlMotor(2, false, 40);
   }
   if (State2 && !State1 && !State0) { // RIGHT
-    controlMotor(1, false, 230);
+    controlMotor(1, false, 40);
+    //MotorStop(1);
     controlMotor(2, true, 230);
   }
 }

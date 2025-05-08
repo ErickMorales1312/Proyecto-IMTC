@@ -6,13 +6,6 @@
 // Variables
 HardwareSerial gpsSerial(2);
 TinyGPSPlus gps;
-bool State2 = LOW;
-bool State1 = LOW;
-bool State0 = LOW;
-float Latitud = 0;
-float Longitud = 0;
-float HDOP = 0;
-int Satellites = 0;
 int contador = 0;
 
 // Definición de pines
@@ -97,27 +90,10 @@ void setup() {
 void loop() {
 
   server.handleClient();
+
+  // Actualizar valores del GPS 
+  actualizarGPS(gpsSerial, gps, contador, Latitud, Longitud, HDOP, Satellites);
  
-  unsigned long start = millis();
-
-  while (millis() - start < 1000)
-  {
-    while (gpsSerial.available() > 0)
-    {
-      gps.encode(gpsSerial.read());
-    }
-
-    if (gps.location.isUpdated() || contador == 10)
-    {
-      contador = 0;
-      Latitud = Serial.println(gps.location.lat(), 6);
-      Longitud = Serial.println(gps.location.lng(), 6);
-      HDOP = Serial.println(gps.hdop.value() / 100.0); 
-      Satellites= Serial.println(gps.satellites.value());
-    }
-  }
-  contador++;
-
   // Actualización de estados del motor
   if (!State2 && !State1 && !State0) { // STOP
     MotorStop(1);
@@ -170,6 +146,26 @@ void MotorStop(int motor) {
   } else if (motor == 2) {
     stopMotor(IN3Pin, IN4Pin, EN2Pin);
   }
+}
+
+// Funciones del GPS
+void actualizarGPS(HardwareSerial &gpsSerial, TinyGPSPlus &gps, int &contador, float &Latitud, float &Longitud, float &HDOP, int &Satellites) {
+  unsigned long start = millis();
+  while (millis() - start < 1000){
+
+    while (gpsSerial.available() > 0)
+    { gps.encode(gpsSerial.read());}
+
+    if (gps.location.isUpdated() || contador == 10)
+    {
+      contador = 0;
+      Latitud = Serial.println(gps.location.lat(), 6);
+      Longitud = Serial.println(gps.location.lng(), 6);
+      HDOP = Serial.println(gps.hdop.value() / 100.0); 
+      Satellites= Serial.println(gps.satellites.value());
+    }
+  }
+  contador++;
 }
 
 // Funciones del servidor web

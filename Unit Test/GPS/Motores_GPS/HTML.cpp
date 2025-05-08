@@ -1,5 +1,16 @@
 #include "HTML.h"
 
+ // Inicializar Variables
+ bool State2 = LOW;
+ bool State1 = LOW;
+ bool State0 = LOW;
+ float Latitud = 0;
+ float Longitud = 0;
+ float HDOP = 0;
+ int Satellites = 0;
+ 
+
+
 String SendHTML(uint8_t Status2, uint8_t Status1, uint8_t Status0) {
   String html = "<!DOCTYPE html><html>\n";
   html += "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n";
